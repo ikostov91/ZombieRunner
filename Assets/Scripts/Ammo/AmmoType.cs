@@ -4,6 +4,7 @@ namespace Assets.Scripts.AmmoScripts
     {
         PistolBullets,
         Shells,
-        CarbineBullets
+        CarbineBullets,
+        Grenades
     }
 }

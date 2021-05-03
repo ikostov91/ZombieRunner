@@ -1,4 +1,3 @@
-using Assets;
 using UnityEngine;
 using Assets.Scripts.AmmoScripts;
 using Assets.Scripts.Constants;
@@ -12,7 +11,7 @@ namespace Assets.Scripts.PickupScriprs
 
         public void OnTriggerEnter(Collider otherCollider)
         {
-            if (otherCollider.gameObject.tag == TagConstants.Player)
+            if (otherCollider.gameObject.CompareTag(TagConstants.Player))
             {
                 var ammo = FindObjectOfType<Ammo>();
                 ammo.IncreaseCurrentAmmo(this._ammoType, this._ammoAmmount);

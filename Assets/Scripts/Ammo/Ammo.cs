@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
 using UnityEngine;
 
 namespace Assets.Scripts.AmmoScripts
@@ -26,15 +24,16 @@ namespace Assets.Scripts.AmmoScripts
 
         private AmmoSlot GetAmmoSlot(AmmoType ammoType)
         {
-            foreach (AmmoSlot slot in this._ammoSlots)
-            {
-                if (slot._ammoType == ammoType)
-                {
-                    return slot;
-                }
-            }
+            //foreach (AmmoSlot slot in this._ammoSlots)
+            //{
+            //    if (slot._ammoType == ammoType)
+            //    {
+            //        return slot;
+            //    }
+            //}
 
-            return null;
+            //return null;
+            return this._ammoSlots.FirstOrDefault(x => x._ammoType == ammoType);
         }
     }
 }

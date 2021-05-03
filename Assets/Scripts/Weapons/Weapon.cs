@@ -7,15 +7,10 @@ using Assets.Scripts.Player;
 
 namespace Assets.Scripts.WeaponScripts
 {
-    public class Weapon : MonoBehaviour
+    public class Weapon : BaseWeapon
     {
-        [SerializeField] private AmmoType _ammoType;
-
-        [SerializeField] private Camera _fpsCamera;
         [SerializeField] private ParticleSystem _muzzleFlash;
         [SerializeField] private GameObject _hitEffect;
-        [SerializeField] private Ammo _ammoSlot;
-        [SerializeField] private TextMeshProUGUI _ammoText;
 
         [SerializeField] private float _range = 100f;
         [SerializeField] private float _damage = 17f;
@@ -53,8 +48,7 @@ namespace Assets.Scripts.WeaponScripts
                 }
 
                 this.VisualizeWeaponRecoil();
-                this.DisplayAmmo();
-
+                base.DisplayAmmo();
             }
         }
 
@@ -116,11 +110,6 @@ namespace Assets.Scripts.WeaponScripts
                     Time.deltaTime * this._recoilSpeed / 2
                 );
             }
-        }
-
-        private void DisplayAmmo()
-        {
-            this._ammoText.text = this._ammoSlot.GetCurrentAmmo(this._ammoType).ToString();
         }
 
         private void ProcessRayCast()

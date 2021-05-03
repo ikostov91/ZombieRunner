@@ -17,14 +17,17 @@ public class MusicPlayer : MonoBehaviour
 
     private void PlayTheme()
     {
+        this._audioSource.loop = true;
         if (SceneManager.GetActiveScene().name == LevelConstants.MainMenu)
         {
-            this._audioSource.PlayOneShot(this._menuTheme);
+            this._audioSource.clip = this._menuTheme;
+            this._audioSource.Play();
         }
         else
         {
             int randomIndex = Random.Range(0, this._gameplayThemes.Length);
-            this._audioSource.PlayOneShot(this._gameplayThemes[randomIndex]);
+            this._audioSource.clip = this._gameplayThemes[randomIndex];
+            this._audioSource.Play();
         }
     }
 }

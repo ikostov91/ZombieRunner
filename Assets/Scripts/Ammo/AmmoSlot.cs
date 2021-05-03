@@ -1,5 +1,4 @@
 ﻿using System;
-using Assets.Scripts.AmmoScripts;
 
 namespace Assets.Scripts.AmmoScripts
 {

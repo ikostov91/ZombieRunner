@@ -6,7 +6,7 @@ namespace Assets.Scripts.WeaponScripts
     public class WeaponSwitcher : MonoBehaviour
     {
         [SerializeField] private int _currentWeapon = 0;
-        private Weapon[] _weapons;
+        private BaseWeapon[] _weapons;
 
         void Start()
         {
@@ -68,14 +68,14 @@ namespace Assets.Scripts.WeaponScripts
 
         private void GetWeapons()
         {
-            this._weapons = this.GetComponentsInChildren<Weapon>();
+            this._weapons = this.GetComponentsInChildren<BaseWeapon>();
         }
 
         private void SetWeaponActive()
         {
             int weaponIndex = 0;
 
-            foreach (Weapon weapon in this._weapons)
+            foreach (BaseWeapon weapon in this._weapons)
             {
                 bool isCurrentWeapon = weaponIndex == _currentWeapon;
                 weapon.gameObject.SetActive(isCurrentWeapon);
