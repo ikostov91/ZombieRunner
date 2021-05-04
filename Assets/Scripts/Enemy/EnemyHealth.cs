@@ -1,9 +1,10 @@
 ﻿using Assets.Scripts.Constants;
+using Assets.Scripts.Interfaces;
 using UnityEngine;
 
 namespace Assets.Scripts.EnemyScripts
 {
-    public class EnemyHealth : MonoBehaviour
+    public class EnemyHealth : MonoBehaviour, IDamagable
     {
         [SerializeField] private AudioClip _deathSound;
         [SerializeField] private AudioClip[] _damageTakenSounds;
@@ -17,11 +18,14 @@ namespace Assets.Scripts.EnemyScripts
 
         public void TakeDamage(float damage)
         {
-            BroadcastMessage(MessageConstants.OnDamageTaken);
             this._hitPoints -= damage;
             if (this._hitPoints <= 0f)
             {
                 this.Die();
+            }
+            else
+            {
+                BroadcastMessage(MessageConstants.OnDamageTaken);
             }
         }
 

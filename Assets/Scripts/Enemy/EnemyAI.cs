@@ -36,6 +36,7 @@ namespace Assets.Scripts.EnemyScripts
 
             this.FollowPlayerIfInRange();
             this.MakeSounds();
+            this.SetIdleIfAgentIsStopped();
         }
 
         void FixedUpdate()
@@ -90,7 +91,10 @@ namespace Assets.Scripts.EnemyScripts
         {
             this._animator.SetBool(AnimationConstants.Attack, false);
             this._animator.SetTrigger(AnimationConstants.Move);
-            this._navMeshAgent.SetDestination(this._target.position);
+            if (this._navMeshAgent.enabled)
+            {
+                this._navMeshAgent.SetDestination(this._target.position);
+            }   
         }
 
         private void FaceTarget()
@@ -117,6 +121,31 @@ namespace Assets.Scripts.EnemyScripts
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(this.transform.position, this._chaseRange);
+        }
+
+        public void InvestigateEvent(Vector3 eventPosition)
+        {
+            if (this._navMeshAgent.enabled)
+            {
+                this._navMeshAgent.SetDestination(eventPosition);
+                this._animator.SetTrigger(AnimationConstants.Move);
+            }
+        }
+
+        private void SetIdleIfAgentIsStopped()
+        {
+            if (this._navMeshAgent.enabled)
+            {
+                if (!this._navMeshAgent.hasPath)
+                {
+                    Debug.Log("IDLE");
+                }
+                // this._animator.SetTrigger(AnimationConstants.Idle);
+                //if (this._navMeshAgent.remainingDistance <= this._navMeshAgent.stoppingDistance)
+                //{
+                    
+                //}
+            }
         }
     }
 }

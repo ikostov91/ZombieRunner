@@ -21,7 +21,7 @@ public class Grenade : BaseWeapon
     {
         if (!PauseHandler.GamePaused)
         {
-            if (Input.GetMouseButtonDown(0) && this._ammoSlot.GetCurrentAmmo(this._ammoType) > 0 && this._canThrow)
+            if (Input.GetMouseButtonDown(0) && this._canThrow)
             {
                 this.StartCoroutine(this.Throw());
             }

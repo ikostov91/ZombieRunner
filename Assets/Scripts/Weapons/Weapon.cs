@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using TMPro;
 using UnityEngine;
-using Assets.Scripts.AmmoScripts;
 using Assets.Scripts.EnemyScripts;
 using Assets.Scripts.Player;
 
@@ -20,8 +18,6 @@ namespace Assets.Scripts.WeaponScripts
 
         [SerializeField] private float _maxRecoil_x = -20f;
         [SerializeField] private float _recoilSpeed = 7f;
-        [SerializeField] private float _maxTrans_x = 1.0f;
-        [SerializeField] private float _maxTrans_z = -1.0f;
 
         [SerializeField] private AudioClip _fireSound;
         private AudioSource _audioSource;
