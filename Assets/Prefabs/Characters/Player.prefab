@@ -416,6 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitPoints: 100
+  _healthText: {fileID: 0}
 --- !u!114 &26953320
 MonoBehaviour:
   m_ObjectHideFlags: 0
