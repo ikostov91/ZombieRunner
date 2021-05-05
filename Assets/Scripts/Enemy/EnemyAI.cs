@@ -138,7 +138,7 @@ namespace Assets.Scripts.EnemyScripts
             {
                 if (!this._navMeshAgent.hasPath)
                 {
-                    Debug.Log("IDLE");
+                    // Debug.Log("IDLE");
                 }
                 // this._animator.SetTrigger(AnimationConstants.Idle);
                 //if (this._navMeshAgent.remainingDistance <= this._navMeshAgent.stoppingDistance)

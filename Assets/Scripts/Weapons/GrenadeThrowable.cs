@@ -1,6 +1,5 @@
 using Assets.Scripts.EnemyScripts;
 using Assets.Scripts.Interfaces;
-using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -8,23 +7,35 @@ public class GrenadeThrowable : MonoBehaviour
 {
     [SerializeField] private float _explodeDelay = 5f;
     [SerializeField] private float _soundVolume = 1f;
-    [SerializeField] private float _damagePoints = 300f;
+    [SerializeField] private float _damagePoints = 100f;
     [SerializeField] private float _explosionRadius = 15f;
     [SerializeField] private float _noiseAttractDistance = 50f;
+    [SerializeField] private float _explosionDuration = 3f;
+    [SerializeField] private ParticleSystem _explosionEffect;
     [SerializeField] private AudioClip _explosionSound;
 
     void Start()
     {
-        this.StartCoroutine(this.Explode());
+        Invoke(nameof(this.Explode), this._explodeDelay);
     }
 
-    private IEnumerator Explode()
+    private void Explode()
     {
-        yield return new WaitForSeconds(this._explodeDelay);
+        this.PlayExplosionVFX();
         AudioSource.PlayClipAtPoint(this._explosionSound, this.gameObject.transform.position, this._soundVolume);
         this.DealDamage();
         this.AttractNearbyEnemies();
         Destroy(this.gameObject);
+    }
+
+    private void PlayExplosionVFX()
+    {
+        ParticleSystem explosion = Instantiate(
+                            this._explosionEffect,
+                            this.gameObject.transform.position,
+                            this.gameObject.transform.rotation);
+        explosion.Play();
+        Destroy(explosion, this._explosionDuration);
     }
 
     private void DealDamage()
