@@ -45,7 +45,9 @@ public class GrenadeThrowable : MonoBehaviour
         {
             if (collider.gameObject.TryGetComponent(out IDamagable damagableObject))
             {
-                damagableObject.TakeDamage(this._damagePoints);
+                float proximity = (collider.gameObject.transform.position - this.gameObject.transform.position).magnitude;
+                float damageMultiplier = 1 - (proximity / this._explosionRadius);
+                damagableObject.TakeDamage(this._damagePoints * damageMultiplier);
             }
         }
     }

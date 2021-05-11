@@ -1,15 +1,16 @@
 using UnityEngine;
 using Assets.Scripts.AmmoScripts;
 using Assets.Scripts.Constants;
+using Assets.Scripts.Pickups;
 
 namespace Assets.Scripts.PickupScriprs
 {
-    public class AmmoPickUp : MonoBehaviour
+    public class AmmoPickUp : PickupBase
     {
         [SerializeField] private int _ammoAmmount = 5;
         [SerializeField] private AmmoType _ammoType = AmmoType.PistolBullets;
 
-        public void OnTriggerEnter(Collider otherCollider)
+        public override void OnTriggerEnter(Collider otherCollider)
         {
             if (otherCollider.gameObject.CompareTag(TagConstants.Player))
             {
