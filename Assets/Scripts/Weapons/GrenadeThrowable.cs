@@ -31,9 +31,9 @@ public class GrenadeThrowable : MonoBehaviour
     private void PlayExplosionVFX()
     {
         ParticleSystem explosion = Instantiate(
-                            this._explosionEffect,
-                            this.gameObject.transform.position,
-                            this.gameObject.transform.rotation);
+            this._explosionEffect,
+            this.gameObject.transform.position,
+            this.gameObject.transform.rotation);
         explosion.Play();
         Destroy(explosion, this._explosionDuration);
     }

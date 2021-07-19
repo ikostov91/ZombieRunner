@@ -16,7 +16,21 @@ namespace Assets.Scripts.PlayerScripts
 
         public void TakeDamage(float damage)
         {
-            this._hitPoints -= damage;
+            float hitPoints = damage;
+            if (this.gameObject.TryGetComponent(out PlayerArmor playerArmor))
+            {
+                var remainingHitPoints = playerArmor.TakeDamage(damage);
+                if (remainingHitPoints == 0f)
+                {
+                    return;
+                }
+                else
+                {
+                    hitPoints = remainingHitPoints;
+                }
+            }
+
+            this._hitPoints -= hitPoints;
             if (this._hitPoints <= 0)
             {
                 this.GetComponent<DeathHandler>().HandleDeath();

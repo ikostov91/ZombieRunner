@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: d7f0313e91570824a8f49cb3e640cb4b, type: 2}
+--- !u!114 &28884724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 690312903, guid: 71508ac863dd5be468695d0a2c53b76f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8916075379640152480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &64269668
 GameObject:
   m_ObjectHideFlags: 0
@@ -5016,7 +5028,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: -0.013888739, z: 4.5904e-41, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -26.36229}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6108,7 +6120,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18720
+  m_Name: pb_Mesh18726
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8678,6 +8690,11 @@ PrefabInstance:
       propertyPath: _damageCanvas
       value: 
       objectReference: {fileID: 1649448527}
+    - target: {fileID: 902537555359130047, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: _armorText
+      value: 
+      objectReference: {fileID: 28884724}
     - target: {fileID: 3632594030831690843, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: _ammoText
@@ -9626,7 +9643,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18734
+  m_Name: pb_Mesh18740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13122,11 +13139,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8916075380241847514, guid: 71508ac863dd5be468695d0a2c53b76f,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8916075380418362730, guid: 71508ac863dd5be468695d0a2c53b76f,
         type: 3}
       propertyPath: m_Name
