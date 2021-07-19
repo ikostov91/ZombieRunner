@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb535fb033385248b71b88d8655ae73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pickupPrefabs: []
-  _spawnPoints: []
+  pickupsData: {fileID: 11400000, guid: 0a0de409435e28940b6c4ebf700c266d, type: 2}
+  _newSpawnDelay: 15

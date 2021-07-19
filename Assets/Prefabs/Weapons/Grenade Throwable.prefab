@@ -137,6 +137,7 @@ MonoBehaviour:
   _explosionDuration: 3
   _explosionEffect: {fileID: 1051429227739783118}
   _explosionSound: {fileID: 8300000, guid: 684860fbcf8b9a348932084c267eaac1, type: 3}
+  _explosionLight: {fileID: 0}
 --- !u!82 &1010389060310098068
 AudioSource:
   m_ObjectHideFlags: 0
@@ -302,8 +303,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6643397987803366307, guid: 0b7ef94b8a009a64db12e57d67622a0e,
         type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643397987803366307, guid: 0b7ef94b8a009a64db12e57d67622a0e,
+        type: 3}
       propertyPath: InitialModule.size3D
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643397987803366307, guid: 0b7ef94b8a009a64db12e57d67622a0e,
+        type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6643397987803366307, guid: 0b7ef94b8a009a64db12e57d67622a0e,
         type: 3}

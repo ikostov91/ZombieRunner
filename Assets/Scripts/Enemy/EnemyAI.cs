@@ -136,15 +136,10 @@ namespace Assets.Scripts.EnemyScripts
         {
             if (this._navMeshAgent.enabled)
             {
-                if (!this._navMeshAgent.hasPath)
+                if (!this._isEnemyProvoked && this._navMeshAgent.hasPath && this._navMeshAgent.remainingDistance < 3f)
                 {
-                    // Debug.Log("IDLE");
+                    this._animator.SetTrigger(AnimationConstants.Idle);
                 }
-                // this._animator.SetTrigger(AnimationConstants.Idle);
-                //if (this._navMeshAgent.remainingDistance <= this._navMeshAgent.stoppingDistance)
-                //{
-                    
-                //}
             }
         }
     }

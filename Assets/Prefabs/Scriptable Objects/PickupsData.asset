@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ebfd05e2dbf50c4d94c913eb2ad036e, type: 3}
+  m_Name: PickupsData
+  m_EditorClassIdentifier: 
+  pickupPrefabs:
+  - {fileID: 1841758036, guid: 1d74481f703170f47b1f186563c6a974, type: 3}
+  - {fileID: 616875452387021906, guid: c7105ad84668ba646a3d969d71736d4c, type: 3}
+  - {fileID: 902838894, guid: 83036def00c627d4480655aba0b14d2f, type: 3}
+  - {fileID: 997324467, guid: bd1fab0692139b24cb172f6d2257622a, type: 3}
+  - {fileID: 962972627418088024, guid: 57423c8be5cacf044ba7a6f43df6db8c, type: 3}
+  pickupSpawnPoints:
+  - {x: 33.96, y: 25.67, z: 47.666664}
+  - {x: 48.66, y: 34.19, z: -13.86}
+  - {x: -28.32, y: 39.05, z: 21.06}
+  - {x: -59.98, y: 39.14, z: 43.05}
+  - {x: -61.27, y: 33.55, z: 5.4}
+  - {x: -88.3, y: 33.36, z: -53.5}
+  - {x: -20.88, y: 28.41, z: -31.8}
