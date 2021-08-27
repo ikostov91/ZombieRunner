@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5224840041803774586}
   - component: {fileID: 1771860786131639819}
   - component: {fileID: 7801487257381421285}
+  - component: {fileID: 1527914357}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -177,6 +179,22 @@ MonoBehaviour:
   _damageTakenSounds: []
   _soundsVolume: 1.5
   _hitPoints: 100
+--- !u!54 &1527914357
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4405716228848092724}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &4717896242910752543
 PrefabInstance:
   m_ObjectHideFlags: 0

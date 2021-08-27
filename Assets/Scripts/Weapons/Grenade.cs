@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grenade : BaseWeapon
 {
     [SerializeField] private GameObject _grenadePrefab;
-    [SerializeField] private float _throwSpeed = 10f;
+    [SerializeField] private float _throwForce = 40f;
     [SerializeField] private float _throwDelay = 1f;
 
     private MeshRenderer _meshRenderer;
@@ -14,7 +14,7 @@ public class Grenade : BaseWeapon
 
     void Start()
     {
-        this._meshRenderer = GetComponent<MeshRenderer>();    
+        this._meshRenderer = GetComponent<MeshRenderer>();
     }
 
     void Update()
@@ -35,12 +35,10 @@ public class Grenade : BaseWeapon
     {
         this._canThrow = false;
 
-        Vector3 position = this.gameObject.transform.position;
         Vector3 throwDirection = this._fpsCamera.transform.forward.normalized;
 
-        GameObject grenade = Instantiate(this._grenadePrefab);
-        grenade.transform.position = position;
-        grenade.GetComponent<Rigidbody>().velocity = throwDirection * this._throwSpeed;
+        GameObject grenade = Instantiate(this._grenadePrefab, transform.position, transform.rotation);
+        grenade.GetComponent<Rigidbody>().AddForce(throwDirection * this._throwForce);
 
         this._ammoSlot.ReduceCurrentAmmo(this._ammoType);
         if (this._ammoSlot.GetCurrentAmmo(this._ammoType) == 0)

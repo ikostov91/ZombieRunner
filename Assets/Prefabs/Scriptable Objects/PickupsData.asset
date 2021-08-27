@@ -26,3 +26,12 @@ MonoBehaviour:
   - {x: -61.27, y: 33.55, z: 5.4}
   - {x: -88.3, y: 33.36, z: -53.5}
   - {x: -20.88, y: 28.41, z: -31.8}
+  pickupSpawnPoints2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

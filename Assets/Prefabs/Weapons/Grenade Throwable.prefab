@@ -132,12 +132,12 @@ MonoBehaviour:
   _explodeDelay: 3
   _soundVolume: 2
   _damagePoints: 300
+  _explosionForce: 1400
   _explosionRadius: 5
   _noiseAttractDistance: 50
   _explosionDuration: 3
   _explosionEffect: {fileID: 1051429227739783118}
   _explosionSound: {fileID: 8300000, guid: 684860fbcf8b9a348932084c267eaac1, type: 3}
-  _explosionLight: {fileID: 0}
 --- !u!82 &1010389060310098068
 AudioSource:
   m_ObjectHideFlags: 0

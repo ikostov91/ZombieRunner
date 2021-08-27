@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ammoAmmount: 1
   _ammoType: 3
+  _pickUpSound: {fileID: 8300000, guid: 1dda36d5b81356848acc3d9b3adc19a4, type: 3}
 --- !u!1 &7545520748322181335
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,7 +40,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7545520748322181335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.49, z: 0}
+  m_LocalPosition: {x: 0, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8221094496518040664}
@@ -57,7 +58,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.12817514, g: 0.7830189, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -121,18 +122,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9072111509127781240, guid: 8daec4aba3341ed478a971dd92e7c59c,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072111509127781240, guid: 8daec4aba3341ed478a971dd92e7c59c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072111509127781240, guid: 8daec4aba3341ed478a971dd92e7c59c,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 55.72
       objectReference: {fileID: 0}
     - target: {fileID: 9072111509127781240, guid: 8daec4aba3341ed478a971dd92e7c59c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -15.86
       objectReference: {fileID: 0}
     - target: {fileID: 9072111509127781240, guid: 8daec4aba3341ed478a971dd92e7c59c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 48.19
       objectReference: {fileID: 0}
     - target: {fileID: 9072111509127781240, guid: 8daec4aba3341ed478a971dd92e7c59c,
         type: 3}
@@ -199,33 +210,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade_lowpoly_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1415556611663978, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_LocalScale.x
-      value: 13
+      value: 6.98841
       objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_LocalScale.y
-      value: 13
+      value: 6.98841
       objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_LocalScale.z
-      value: 13
+      value: 6.98841
       objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0059547
       objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: -0.22065
       objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.0030975
       objectReference: {fileID: 0}
     - target: {fileID: 4553195561164988, guid: 216ec6e5fef3e254d86b21071e614d66, type: 3}
       propertyPath: m_LocalRotation.w

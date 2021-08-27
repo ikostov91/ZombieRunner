@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5883603716659103757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.39601, y: 28.306, z: 48.074345}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 45.372, y: 28.485, z: 48.074345}
+  m_LocalScale: {x: 0.75586, y: 0.75586, z: 0.75586}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MeshFormatVersion: 1
+  m_MeshFormatVersion: 2
   m_Faces:
   - m_Indexes: 000000000100000002000000010000000300000002000000
     m_SmoothingGroup: 1
@@ -2148,7 +2148,7 @@ MonoBehaviour:
       m_SwapUV: 0
       m_Fill: 1
       m_Scale: {x: 1, y: 1}
-      m_Offset: {x: 0, y: 0}
+      m_Offset: {x: 0.0000000018626451, y: 0}
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
@@ -3634,10 +3634,10 @@ MonoBehaviour:
   - {x: 0.039027825, y: 0.86822885}
   - {x: 0.004813264, y: 0.9305943}
   - {x: 0.034221273, y: 0.9305948}
-  - {x: -0.03902782, y: 0.8682173}
-  - {x: -0.000008663947, y: 0.8682173}
-  - {x: -0.034221273, y: 0.9305833}
-  - {x: -0.004813262, y: 0.93058276}
+  - {x: -0.039027825, y: 0.8682173}
+  - {x: -0.000008665809, y: 0.8682173}
+  - {x: -0.034221277, y: 0.9305833}
+  - {x: -0.0048132637, y: 0.93058276}
   - {x: -0.07506192, y: 0.87401074}
   - {x: -0.036046848, y: 0.87401074}
   - {x: -0.07025801, y: 0.9363763}
@@ -4181,9 +4181,9 @@ MonoBehaviour:
   - {x: -0.1951189, y: -0.000007474321, z: -0.98077965, w: -1}
   - {x: -0.1951189, y: -0.000007474321, z: -0.98077965, w: -1}
   - {x: -0.19509944, y: -0.000014948643, z: -0.9807835, w: -1}
-  - {x: 0.1951384, y: 0, z: -0.9807757, w: -1}
-  - {x: 0.19511932, y: 0.000008402926, z: -0.9807795, w: -1}
-  - {x: 0.19511932, y: 0.000008402926, z: -0.9807795, w: -1}
+  - {x: 0.19513841, y: 0, z: -0.9807758, w: -1}
+  - {x: 0.1951193, y: 0.000008408698, z: -0.9807795, w: -1}
+  - {x: 0.1951193, y: 0.000008408698, z: -0.9807795, w: -1}
   - {x: 0.1951002, y: 0.000016817396, z: -0.98078334, w: -1}
   - {x: 0.5555573, y: 0, z: -0.83147824, w: -1}
   - {x: 0.5555874, y: -0.000014949926, z: -0.8314582, w: -1}
@@ -4818,6 +4818,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
+  m_VersionIndex: 0
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4833,6 +4834,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

@@ -9,6 +9,7 @@ namespace Assets.Scripts.PickupScriprs
     {
         [SerializeField] private int _ammoAmmount = 5;
         [SerializeField] private AmmoType _ammoType = AmmoType.PistolBullets;
+        [SerializeField] private AudioClip _pickUpSound;
 
         public override void OnTriggerEnter(Collider otherCollider)
         {
@@ -16,6 +17,7 @@ namespace Assets.Scripts.PickupScriprs
             {
                 var ammo = FindObjectOfType<Ammo>();
                 ammo.IncreaseCurrentAmmo(this._ammoType, this._ammoAmmount);
+                AudioSource.PlayClipAtPoint(this._pickUpSound, this.transform.position);
                 Destroy(this.gameObject);
             }
         }

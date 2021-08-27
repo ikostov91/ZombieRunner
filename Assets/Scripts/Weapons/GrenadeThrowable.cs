@@ -8,6 +8,7 @@ public class GrenadeThrowable : MonoBehaviour
     [SerializeField] private float _explodeDelay = 5f;
     [SerializeField] private float _soundVolume = 1f;
     [SerializeField] private float _damagePoints = 100f;
+    [SerializeField] private float _explosionForce = 700f;
     [SerializeField] private float _explosionRadius = 15f;
     [SerializeField] private float _noiseAttractDistance = 50f;
     [SerializeField] private float _explosionDuration = 3f;
@@ -48,6 +49,12 @@ public class GrenadeThrowable : MonoBehaviour
                 float proximity = (collider.gameObject.transform.position - this.gameObject.transform.position).magnitude;
                 float damageMultiplier = 1 - (proximity / this._explosionRadius);
                 damagableObject.TakeDamage(this._damagePoints * damageMultiplier);
+
+                var rb = collider.gameObject.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.AddExplosionForce(this._explosionForce, this.gameObject.transform.position, this._explosionRadius);
+                }
             }
         }
     }
