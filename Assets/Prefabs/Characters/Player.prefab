@@ -546,7 +546,6 @@ MonoBehaviour:
   _ammoText: {fileID: 0}
   _grenadePrefab: {fileID: 7609394776759227231, guid: bd57a095cb88466439f97c68ae56228c,
     type: 3}
-  _throwSpeed: 15
   _throwForce: 800
   _throwDelay: 1
 --- !u!1001 &1183792764807643392

@@ -19,7 +19,8 @@ namespace Assets.Scripts.Missions
 
         public override void Complete()
         {
-            Debug.Log("COMPLETE MISSION");
+            // TODO add sound or some other effects on completed
+            this._isCompleted = true;
         }
 
         public override void DrawHUD()

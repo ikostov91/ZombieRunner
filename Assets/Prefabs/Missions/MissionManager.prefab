@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5438444618933345847}
   - component: {fileID: 5438444618933345844}
+  - component: {fileID: 1729746783}
   m_Layer: 0
   m_Name: MissionManager
   m_TagString: Untagged
@@ -43,5 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c1e45a055ffe54c95c944af294fed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _missions:
-  - {fileID: 0}
+--- !u!114 &1729746783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438444618933345845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a2bde5dd54b404e97dd510df799788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

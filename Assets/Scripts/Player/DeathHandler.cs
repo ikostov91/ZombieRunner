@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Assets.Scripts.WeaponScripts;
 using Assets.Scripts.Player;
 
 namespace Assets.Scripts.PlayerScripts

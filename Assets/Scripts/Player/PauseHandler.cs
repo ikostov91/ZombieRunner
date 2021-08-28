@@ -53,6 +53,14 @@ namespace Assets.Scripts.Player
             this.ToggleAudio(this._isPaused);
         }
 
+        public void OnGameWon()
+        {
+            this._isPaused = true;
+            this.ToggleTimeScale(this._isPaused);
+            this.ToggleMouseCursor(this._isPaused);
+            this.ToggleAudio(this._isPaused);
+        }
+
         private void TogglePauseState(bool isPaused)
         {
             GamePaused = isPaused;

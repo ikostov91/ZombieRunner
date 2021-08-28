@@ -1,13 +1,16 @@
 using Assets.Scripts.Missions;
+using Assets.Scripts.Player;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MissionManager : MonoBehaviour
 {
-    public MissionBase[] _missions;
+    private List<MissionBase> _missions;
 
     void Awake()
     {
-        this._missions = GetComponents<MissionBase>();
+        this._missions = this.gameObject.GetComponents<MissionBase>().ToList();
     }
 
     void OnGUI()
@@ -18,7 +21,6 @@ public class MissionManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         foreach (var mission in this._missions)
@@ -26,8 +28,12 @@ public class MissionManager : MonoBehaviour
             if (mission.IsAchieved())
             {
                 mission.Complete();
-                Destroy(mission);
             }
+        }
+
+        if (this._missions.All(x => x.IsCompleted))
+        {
+            FindObjectOfType<WinHandler>().HandleWin();
         }
     }
 }

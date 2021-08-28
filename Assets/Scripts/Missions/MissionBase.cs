@@ -9,6 +9,9 @@ namespace Assets.Scripts.Missions
 {
     public abstract class MissionBase : MonoBehaviour
     {
+        protected bool _isCompleted = false;
+        public bool IsCompleted => this._isCompleted;
+
         public abstract bool IsAchieved();
         public abstract void Complete();
         public abstract void DrawHUD();

@@ -1,39 +1,41 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    // public Animator _transition;
+
     public void StartGame()
     {
         int sceneIndex = 1;
-        SceneManager.LoadScene(sceneIndex);
-    }
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0f;
-    }
-
-    public void ContinueGame()
-    {
-        Time.timeScale = 1f;
+        this.StartCoroutine(this.LoadScene(sceneIndex));
     }
 
     public void PlayAgain()
     {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(sceneIndex);
+        this.StartCoroutine(this.LoadScene(sceneIndex));
         Time.timeScale = 1f;
     }
 
     public void QuitLevel()
     {
         int sceneIndex = 0;
-        SceneManager.LoadScene(sceneIndex);
+        this.StartCoroutine(this.LoadScene(sceneIndex));
     }
 
     public void QuitGame()
     {
         Application.Quit();
-    }    
+    }
+
+    private IEnumerator LoadScene(int sceneIndex)
+    {
+        // this._transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(0); // 1f
+
+        SceneManager.LoadScene(sceneIndex);
+    }
 }
