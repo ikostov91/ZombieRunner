@@ -18,20 +18,5 @@ MonoBehaviour:
   - {fileID: 902838894, guid: 83036def00c627d4480655aba0b14d2f, type: 3}
   - {fileID: 997324467, guid: bd1fab0692139b24cb172f6d2257622a, type: 3}
   - {fileID: 962972627418088024, guid: 57423c8be5cacf044ba7a6f43df6db8c, type: 3}
-  pickupSpawnPoints:
-  - {x: 33.96, y: 25.67, z: 47.666664}
-  - {x: 48.66, y: 34.19, z: -13.86}
-  - {x: -28.32, y: 39.05, z: 21.06}
-  - {x: -59.98, y: 39.14, z: 43.05}
-  - {x: -61.27, y: 33.55, z: 5.4}
-  - {x: -88.3, y: 33.36, z: -53.5}
-  - {x: -20.88, y: 28.41, z: -31.8}
-  pickupSpawnPoints2:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6642786493360263198, guid: 6eea16a661bff154084a83e188b240fd, type: 3}
+  - {fileID: 1874858764172027638, guid: ee6ab07c7b54d2443b270cdbd31d3674, type: 3}

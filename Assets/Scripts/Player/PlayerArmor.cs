@@ -1,4 +1,3 @@
-using Assets.Scripts.PlayerScripts;
 using TMPro;
 using UnityEngine;
 
@@ -8,13 +7,6 @@ public class PlayerArmor : MonoBehaviour
 
     [SerializeField] private float _hitPoints = MAX_HITPOINTS;
     [SerializeField] private TextMeshProUGUI _armorText;
-
-    private PlayerHealth _playerHealth;
-
-    void Start()
-    {
-        this._playerHealth = GetComponent<PlayerHealth>();
-    }
 
     void Update()
     {

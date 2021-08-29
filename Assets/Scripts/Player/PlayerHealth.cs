@@ -6,7 +6,9 @@ namespace Assets.Scripts.PlayerScripts
 {
     public class PlayerHealth : MonoBehaviour, IDamagable
     {
-        [SerializeField] private float _hitPoints = 100f;
+        private const float MAX_HITPOINTS = 100f;
+
+        [SerializeField] private float _hitPoints = MAX_HITPOINTS;
         [SerializeField] private TextMeshProUGUI _healthText;
 
         void Update()
@@ -40,6 +42,11 @@ namespace Assets.Scripts.PlayerScripts
         private void DisplayHealth()
         {
             this._healthText.text = Mathf.Max(this._hitPoints, 0f).ToString();
+        }
+
+        public void RestoreHealth()
+        {
+            this._hitPoints = MAX_HITPOINTS;
         }
     }
 }
