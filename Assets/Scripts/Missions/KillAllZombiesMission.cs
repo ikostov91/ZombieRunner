@@ -8,7 +8,7 @@ namespace Assets.Scripts.Missions
     {
         private void Update()
         {
-            Debug.Log(string.Format("Zombies left: {0}", FindObjectsOfType<EnemyHealth>().Where(x => !x.IsDead).Count()));
+            // Debug.Log(string.Format("Zombies left: {0}", FindObjectsOfType<EnemyHealth>().Where(x => !x.IsDead).Count()));
         }
 
         public override bool IsAchieved()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Throwable
   - PickupSpawnPoint
+  - PlayerSpawnPoint
   layers:
   - Default
   - TransparentFX

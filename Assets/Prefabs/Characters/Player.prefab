@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 3487120574894132073}
   - component: {fileID: 690558681}
   - component: {fileID: 902537555359130047}
+  - component: {fileID: 613707851}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -313,7 +314,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100006}
   serializedVersion: 2
-  m_Mass: 12
+  m_Mass: 70
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -445,13 +446,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ammoSlots:
   - _ammoType: 0
-    _ammoAmount: 10
+    _ammoAmount: 25
   - _ammoType: 1
-    _ammoAmount: 15
+    _ammoAmount: 5
   - _ammoType: 2
-    _ammoAmount: 30
+    _ammoAmount: 20
   - _ammoType: 3
-    _ammoAmount: 3
+    _ammoAmount: 2
 --- !u!114 &690558681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +481,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitPoints: 100
   _armorText: {fileID: 0}
+--- !u!114 &613707851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b096a4b64ea61449ac8f4e02de4d115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &493432460842507132
 GameObject:
   m_ObjectHideFlags: 0

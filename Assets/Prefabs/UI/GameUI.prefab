@@ -256,9 +256,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8916075381445769423}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: QuitLevel
+      - m_Target: {fileID: 1769657645598497340}
+        m_TargetAssemblyTypeName: Assets.Scripts.Player.WinHandler, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -389,8 +389,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8916075381445769423}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 1769657645598497340}
+        m_TargetAssemblyTypeName: Assets.Scripts.Player.WinHandler, Assembly-CSharp
         m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
@@ -509,7 +509,7 @@ RectTransform:
   - {fileID: 862397155}
   - {fileID: 1975057173}
   m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -824,7 +824,7 @@ RectTransform:
   - {fileID: 275167937}
   - {fileID: 215687518}
   m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1150,7 +1150,7 @@ RectTransform:
   - {fileID: 788610231}
   - {fileID: 690312902}
   m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1733,7 +1733,7 @@ RectTransform:
   - {fileID: 527578921}
   - {fileID: 1202420791}
   m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1864,7 +1864,7 @@ RectTransform:
   m_Children:
   - {fileID: 1508700645}
   m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2277,50 +2277,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &2099635979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2099635980}
-  - component: {fileID: 2099635981}
-  m_Layer: 5
-  m_Name: Pause Handler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2099635980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099635979}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2099635981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099635979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af0930f3c2580fb43b80286d3646f1ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pauseCanvas: {fileID: 5282898290968475893}
 --- !u!1 &770606808629922448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,7 +2803,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2099635981}
+      - m_Target: {fileID: 8116428010992672894}
         m_TargetAssemblyTypeName: Assets.Scripts.Player.PauseHandler, Assembly-CSharp
         m_MethodName: ContinueGame
         m_Mode: 1
@@ -2858,7 +2814,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!1 &5000419707125856278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,6 +2827,7 @@ GameObject:
   - component: {fileID: 5282898290968475893}
   - component: {fileID: 6503949566922444260}
   - component: {fileID: 4173477736957954619}
+  - component: {fileID: 8116428010992672894}
   m_Layer: 5
   m_Name: Pause Canvas
   m_TagString: Untagged
@@ -2893,7 +2850,7 @@ RectTransform:
   - {fileID: 7527760168479225666}
   - {fileID: 6018613972515523970}
   m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2961,6 +2918,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8116428010992672894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000419707125856278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af0930f3c2580fb43b80286d3646f1ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseCanvas: {fileID: 5282898290968475893}
 --- !u!1 &5072951772021534312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3052,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2099635981}
+      - m_Target: {fileID: 8116428010992672894}
         m_TargetAssemblyTypeName: Assets.Scripts.Player.PauseHandler, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -3376,6 +3346,7 @@ GameObject:
   - component: {fileID: 8916075380241847515}
   - component: {fileID: 8916075380241847514}
   - component: {fileID: 8916075380241847513}
+  - component: {fileID: 4115250750053237688}
   m_Layer: 5
   m_Name: Game Over Canvas
   m_TagString: Untagged
@@ -3466,6 +3437,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4115250750053237688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916075380241847511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9435e0cd81da19044825a1d07f953584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8916075380418362730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,11 +3478,9 @@ Transform:
   m_Children:
   - {fileID: 8916075381501166086}
   - {fileID: 8916075380241847512}
-  - {fileID: 8916075381445769422}
   - {fileID: 618197383}
   - {fileID: 1649448524}
   - {fileID: 2463800143051319136}
-  - {fileID: 2099635980}
   - {fileID: 1001280290}
   - {fileID: 844630481}
   - {fileID: 1606888895}
@@ -3627,7 +3608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8916075381445769423}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: PlayAgain
         m_Mode: 1
@@ -3835,7 +3816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8916075381445769423}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: QuitLevel
         m_Mode: 1
@@ -3847,49 +3828,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &8916075381445769421
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8916075381445769422}
-  - component: {fileID: 8916075381445769423}
-  m_Layer: 5
-  m_Name: Game Session
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8916075381445769422
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8916075381445769421}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 431.61172, y: 162.9311, z: -444.05746}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8916075380418362731}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8916075381445769423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8916075381445769421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6642aa669f112c246ba1cd667d4779f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8916075381501166085
 GameObject:
   m_ObjectHideFlags: 0

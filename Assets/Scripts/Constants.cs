@@ -12,6 +12,7 @@
     {
         public const string Player = "Player";
         public const string PickupSpawnPoint = "PickupSpawnPoint";
+        public const string PlayerSpawnPoint = "PlayerSpawnPoint";
     }
 
     public static class MessageConstants

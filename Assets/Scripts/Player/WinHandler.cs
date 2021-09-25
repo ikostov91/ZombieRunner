@@ -16,5 +16,15 @@ namespace Assets.Scripts.Player
             this._winCanvas.enabled = true;
             FindObjectOfType<PauseHandler>().OnGameWon();
         }
+
+        public void PlayAgain()
+        {
+            FindObjectOfType<SceneLoader>().PlayAgain();
+        }
+
+        public void Quit()
+        {
+            FindObjectOfType<SceneLoader>().QuitLevel();
+        }
     }
 }

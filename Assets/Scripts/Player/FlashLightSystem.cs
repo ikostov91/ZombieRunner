@@ -8,11 +8,14 @@ namespace Assets.Scripts.PlayerScripts
         [SerializeField] private float _angleDecay = 0.7f;
         [SerializeField] private float _minimumAngle = 40f;
 
+        private float _maxLightIntensity;
+
         private Light _myLight;
 
         private void Start()
         {
             this._myLight = GetComponent<Light>();
+            this._maxLightIntensity = this._myLight.intensity;
         }
 
         private void Update()
@@ -28,7 +31,8 @@ namespace Assets.Scripts.PlayerScripts
 
         public void AddLightIntenisty(float intensityAmount)
         {
-            this._myLight.intensity += intensityAmount;
+            float newIntensity = Mathf.Max(this._myLight.intensity + intensityAmount, this._maxLightIntensity);
+            this._myLight.intensity = newIntensity;
         }
 
         private void DecreaseLightAngle()
