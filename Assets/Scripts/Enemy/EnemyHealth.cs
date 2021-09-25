@@ -6,15 +6,19 @@ namespace Assets.Scripts.EnemyScripts
 {
     public class EnemyHealth : MonoBehaviour, IDamagable
     {
+        private const float MAX_HITPOINTS = 100f;
+
         [SerializeField] private AudioClip _deathSound;
         [SerializeField] private AudioClip[] _damageTakenSounds;
         [SerializeField] private float _soundsVolume = 1.5f;
 
-        [SerializeField] private float _hitPoints = 100f;
+        [SerializeField] private float _hitPoints = MAX_HITPOINTS;
 
         private bool _isDead = false;
 
         public bool IsDead => this._isDead;
+        public float CurrentHealth => this._hitPoints;
+        public float MaxHealth => MAX_HITPOINTS;
 
         public void TakeDamage(float damage)
         {
