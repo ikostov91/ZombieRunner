@@ -11,6 +11,8 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image _fill;
     private EnemyHealth _enemyHealth;
 
+    private Coroutine _makeVisibleCoroutine;
+
     [SerializeField] private float _visibilityDelay = 2f;
 
     // Start is called before the first frame update
@@ -37,6 +39,10 @@ public class HealthBar : MonoBehaviour
     public void OnDamageTaken()
     {
         this.StartCoroutine(this.MakeVisible());
+        if (this._makeVisibleCoroutine != null)
+            this.StopCoroutine(this._makeVisibleCoroutine);
+
+        this._makeVisibleCoroutine = this.StartCoroutine(this.MakeVisible());
     }
 
     private IEnumerator MakeVisible()
